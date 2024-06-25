@@ -25,8 +25,8 @@ function Header() {
                                
                             </ul>
                             <div class="d-flex align-items-center">
-                                
-                                <a class="btn btn-warning btn-hover-secondery text-capitalize " href="#register">register</a>
+                           <a class="btn btn-warning btn-hover-secondery text-capitalize " href="#register">register</a>
+                           <a class="btn btn-hover-secondery text-capitalize" style={{marginLeft:"10px", backgroundColor:"#06C755", color:"white"}} href="/Login">Login</a>
                             </div>
                     </div>
                 </nav>
