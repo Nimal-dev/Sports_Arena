@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Host_Register() {
   const [formData, setFormData] = useState({
     fullName: '',
-    userName: '',
+    contact: '',
     email: '',
     password: ''
   });
@@ -18,7 +18,7 @@ function Host_Register() {
   const validateForm = () => {
     const newErrors = {};
     if (!formData.fullName) newErrors.fullName = 'Full Name is required';
-    if (!formData.userName) newErrors.userName = 'User Name is required';
+    if (!formData.contact) newErrors.contact = 'Contact is required';
     if (!formData.email) newErrors.email = 'Email is required';
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email address is invalid';
     if (!formData.password) newErrors.password = 'Password is required';
@@ -70,16 +70,16 @@ function Host_Register() {
                   </div>
                   <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div className="form-group">
-                      <label className="form-label text-white fs-7 mb-3">User Name</label>
+                      <label className="form-label text-white fs-7 mb-3">Contact</label>
                       <input 
-                        type="text" 
+                        type="number" 
                         className="form-control border-0" 
-                        placeholder="Enter your username" 
-                        name="userName"
-                        value={formData.userName}
+                        placeholder="Enter your mobile number" 
+                        name="contact"
+                        value={formData.contact}
                         onChange={handleInputChange}
                       />
-                      {errors.userName && <small className="text-danger">{errors.userName}</small>}
+                      {errors.contact && <small className="text-critical">{errors.contact}</small>}
                     </div>
                   </div>
                   <div className="col-12">
