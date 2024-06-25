@@ -1431,6 +1431,10 @@
   --bs-text-opacity: 1;
   color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
 }
+.text-critical{
+  --bs-text-opacity: 1;
+  color:red !important;
+}
 
 .text-light {
   --bs-text-opacity: 1;
