@@ -23,7 +23,7 @@ function Register_select() {
                             
                         </div>
                         <div class="card-action text-center pb-xxl-5 pb-xl-5 pb-lg-5 pb-md-4 pb-sm-4 pb-4">
-                            <a href="#" class="btn btn-warning btn-hover-secondery text-capitalize">Register Now</a>
+                            <a href="/Turf_Register" class="btn btn-warning btn-hover-secondery text-capitalize">Register Now</a>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ function Register_select() {
                            
                         </div>
                         <div class="card-action text-center pb-xxl-5 pb-xl-5 pb-lg-5 pb-md-4 pb-sm-4 pb-4">
-                            <a href="#" class="btn btn-warning btn-hover-secondery text-capitalize">Register Now</a>
+                            <a href="/User_Register" class="btn btn-warning btn-hover-secondery text-capitalize">Register Now</a>
                         </div>
                     </div>
                 </div>
@@ -53,6 +53,23 @@ function Register_select() {
                             <h2 class="mb-4 text-center position-relative"><sub class="fs-2 text-black">Host Register</sub></h2>
                            
                             <p class="fs-7 text-center fw-500">Hosting Tournaments? Register Now!</p>
+                            
+                        </div>
+                        <div class="card-action text-center pb-xxl-5 pb-xl-5 pb-lg-5 pb-md-4 pb-sm-4 pb-4">
+                            <a href="/Host_Register" class="btn btn-warning btn-hover-secondery text-capitalize">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+           {/* ---------------------------------Social Media register------------------------------------ */}
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
+                    <div class="card position-relative shadow border-0 h-70">
+                        <div class="card-body pb-4">
+                            
+                            <h2 class="mb-4 text-center position-relative"><sub class="fs-2 text-black">Social Media Register</sub></h2>
+                           
+                            <p class="fs-7 text-center fw-500">Are you a Social Media handler? Then register here to be a part of the team.</p>
                             
                         </div>
                         <div class="card-action text-center pb-xxl-5 pb-xl-5 pb-lg-5 pb-md-4 pb-sm-4 pb-4">
