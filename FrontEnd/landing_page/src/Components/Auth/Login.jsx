@@ -76,8 +76,8 @@ function Login() {
                   </button>
                   
                   <a className="btn" href='/'>
+                    <i className=" fas fa-arrow-left ms-2"></i>
                     <span style={{color:"#4C489D", fontSize:"16px"}}><b>Go back</b></span>
-                    <i className="button__icon fas fa-chevron-right"></i>
                   </a>
                 </form>
               </div>
