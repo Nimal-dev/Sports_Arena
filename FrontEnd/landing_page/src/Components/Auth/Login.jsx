@@ -33,7 +33,7 @@ function Login() {
 
   return (
     <>
-      <section className="contact bg-light position-relative d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
+      <section className="contact bg-secondary position-relative d-flex justify-content-center align-items-center" style={{ height: "100vh", overflow: "hidden" }}>
         <div className="container position-relative">
           <div className="dots-shape-left position-absolute">
             <img src="../assets/images/icons/dot-shape.png" alt="dot-shape" />
@@ -74,9 +74,9 @@ function Login() {
                     <span className="button__text">Log In Now</span>
                     <i className="button__icon fas fa-chevron-right"></i>
                   </button>
-                  <br/>
+                  
                   <a className="btn" href='/'>
-                    <span className="button__text" style={{color:"#4C489D"}}><b>Go back</b></span>
+                    <span style={{color:"#4C489D", fontSize:"16px"}}><b>Go back</b></span>
                     <i className="button__icon fas fa-chevron-right"></i>
                   </a>
                 </form>

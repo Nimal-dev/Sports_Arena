@@ -73,7 +73,7 @@ function Register_select() {
                             
                         </div>
                         <div class="card-action text-center pb-xxl-5 pb-xl-5 pb-lg-5 pb-md-4 pb-sm-4 pb-4">
-                            <a href="#" class="btn btn-warning btn-hover-secondery text-capitalize">Register Now</a>
+                            <a href="/Social_Register" class="btn btn-warning btn-hover-secondery text-capitalize">Register Now</a>
                         </div>
                     </div>
                 </div>
