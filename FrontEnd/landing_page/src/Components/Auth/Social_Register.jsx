@@ -86,7 +86,7 @@ function Social_Register() {
                       <input 
                         type="tel" 
                         className="form-control border-0" 
-                        placeholder="Enter your mobile number" 
+                        placeholder="Enter your Date of Birth" 
                         name="contact"
                         value={formData.Dob}
                         onChange={handleInputChange}
