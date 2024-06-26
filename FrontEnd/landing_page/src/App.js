@@ -5,6 +5,7 @@ import User_Register from "./Components/Auth/User_Register";
 import Turf_Register from "./Components/Auth/Turf_Register";
 import Host_Register from "./Components/Auth/Host_Register";
 import Login from "./Components/Auth/Login";
+import Social_Register from "./Components/Auth/Social_Register";
 
 
 
@@ -22,6 +23,7 @@ function App() {
     <Route path="/User_Register" element={<User_Register/>} />
     <Route path="/Turf_Register" element={<Turf_Register/>} />
     <Route path="/Host_Register" element={<Host_Register/>} />
+    <Route path="/Social_Register" element={<Social_Register/>} />
 
     {/* -----------Register Page Routes End------------- */}
       </Routes>
