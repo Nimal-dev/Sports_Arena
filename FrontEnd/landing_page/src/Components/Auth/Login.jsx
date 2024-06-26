@@ -33,7 +33,7 @@ function Login() {
 
   return (
     <>
-      <section className="contact bg-light position-relative d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
+      <section className="contact bg-secondary position-relative d-flex justify-content-center align-items-center overflow: hidden;" style={{ height: "100vh" }}>
         <div className="container position-relative">
           <div className="dots-shape-left position-absolute">
             <img src="../assets/images/icons/dot-shape.png" alt="dot-shape" />
