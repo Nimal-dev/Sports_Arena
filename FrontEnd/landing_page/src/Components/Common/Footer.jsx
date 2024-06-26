@@ -19,21 +19,11 @@ function Footer() {
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
                     <h5 class="text-white">Social</h5>
                     <ul class="list-unstyled mb-0 pl-0">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/logipromptproacademy/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/logiprompt_pro_academy/">Instagram</a></li>
                     </ul>
                 </div>
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
-                    <h5 class="text-white">Company</h5>
-                    <ul class="list-unstyled mb-0 pl-0">
-                        <li><a href="#hero" >About</a></li>
-                        <li><a href="#">Affiliates</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Legal & Privacy</a></li>
-                    </ul>
-                </div>
+                
                 
             </div>
             <div class="copyrights text-center blue-light  fw-500">@<span id="autodate">2024</span> - All Rights Reserved by <a href="https://logipromptproacademy.com/" class="text-decoration-none" style={{color:"lightgreen"}}>Logiprompt Pro Academy</a></div>
