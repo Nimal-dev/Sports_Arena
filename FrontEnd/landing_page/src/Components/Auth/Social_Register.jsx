@@ -98,7 +98,9 @@ function Social_Register() {
                  
                   <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div className="form-group">
-                      <label className="form-label text-white fs-7 mb-3">Image (Image Upload)</label>
+                      <label className="form-label text-white fs-7 mb-3">Image <small style={{color:
+                      "whitesmoke"
+                      }}>(Profile Picture)</small></label>
                       <input 
                         type="file" 
                         className="form-control border-0" 
