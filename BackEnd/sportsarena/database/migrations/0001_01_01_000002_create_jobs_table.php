@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            $table->string('queue')->index();
+            $table->string('queue', 191); // Use 191 or shorter length if needed
             $table->longText('payload');
             $table->unsignedTinyInteger('attempts');
             $table->unsignedInteger('reserved_at')->nullable();
@@ -22,7 +22,7 @@ return new class extends Migration
         });
 
         Schema::create('job_batches', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->string('id', 36)->primary(); // Reduce the length of 'id' to 36
             $table->string('name');
             $table->integer('total_jobs');
             $table->integer('pending_jobs');
@@ -36,7 +36,12 @@ return new class extends Migration
 
         Schema::create('failed_jobs', function (Blueprint $table) {
             $table->id();
-            $table->string('uuid')->unique();
+            if (!Schema::hasColumn('failed_jobs', 'uuid')) {
+                $table->string('uuid', 36)->unique();
+            } else {
+                // If column exists, add unique constraint
+                $table->unique('uuid');
+            }
             $table->text('connection');
             $table->text('queue');
             $table->longText('payload');
@@ -44,7 +49,6 @@ return new class extends Migration
             $table->timestamp('failed_at')->useCurrent();
         });
     }
-
     /**
      * Reverse the migrations.
      */

@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('userdetails', function (Blueprint $table) {
-            $table->integer('userid')->after('name');
+        Schema::create('likes', function (Blueprint $table) {
+            $table->id();
+            $table->integer('user_id');
+            $table->integer('post_id');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('userdetails', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('likes');
     }
 };
