@@ -1,6 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function Admin_Header() {
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        localStorage.removeItem('userdata');
+        navigate('/');
+      };
   return (
     <>
      <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
@@ -16,7 +22,7 @@ function Admin_Header() {
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             
-                            <a href="#" class="dropdown-item">Log Out</a>
+                            <a onClick={handleLogout} href="" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
                 
