@@ -1,8 +1,23 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+
 
 function Users_List() {
+    const [users, setUsers] = useState([]);
+    const [error, setError] = useState("");
+
+    useEffect(() => {
+        fetch("http://localhost:8000/api/UserView")
+          .then((res) => res.json())
+          .then((result) => {
+            setUsers(result);
+            console.log(result);
+          })
+          .catch((error) => {
+            setError("Failed to fetch tournaments.");
+          });
+      }, []);
   return (
-    <div class="col-12">
+    <div class="col-6">
     <div class="bg-secondary rounded h-100 p-4">
         <h6 class="mb-4">USERS LIST</h6>
         <div class="table-responsive">
@@ -10,42 +25,25 @@ function Users_List() {
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
+                        <th scope="col">Name</th>
+                        
                         <th scope="col">Email</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">ZIP</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">Usertype</th>
+                        <th scope="col">Joined Date</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
+                {users.map((user, index) => (
                     <tr>
-                        <th scope="row">1</th>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>jhon@email.com</td>
-                        <td>USA</td>
-                        <td>123</td>
-                        <td>Member</td>
+                          <th scope="row">{index + 1}</th>
+                        <td>{user.name}</td>
+                        <td>{user.email}</td>
+                        <td>{user.usertype}</td>
+                        <td>{user.created_at}</td>
+                        
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>mark@email.com</td>
-                        <td>UK</td>
-                        <td>456</td>
-                        <td>Member</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>jacob@email.com</td>
-                        <td>AU</td>
-                        <td>789</td>
-                        <td>Member</td>
-                    </tr>
+                ))}
                 </tbody>
             </table>
         </div>
