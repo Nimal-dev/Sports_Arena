@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function UserRegister() {
   const [formData, setFormData] = useState({
@@ -42,15 +44,17 @@ function UserRegister() {
         const data = await response.json();
 
         if (response.ok) {
+          toast.success('User registered successfully!');
           setMessage('User registered successfully!');
-          console.log('Success:', data);
+          setFormData({ name: '', email: '', password: '' }); // Clear form after successful registration
         } else {
           setErrors(data.errors || {});
+          toast.error('Registration failed!');
           setMessage('Registration failed!');
-          console.log('Error:', data);
         }
       } catch (error) {
         console.error('Error:', error);
+        toast.error('An error occurred. Please try again.');
         setMessage('An error occurred. Please try again.');
       }
     }
@@ -128,6 +132,7 @@ function UserRegister() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import Feedback from '../Home_components/UserHomeComponents/Feedback'
 
 function Footer() {
   return (
@@ -16,6 +17,7 @@ function Footer() {
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
                     <h5 class="text-white">Social</h5>
                     <ul class="list-unstyled mb-0 pl-0">

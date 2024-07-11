@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    const [loginError, setLoginError] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
     const authenticate = () => {
@@ -29,16 +29,17 @@ function SignIn() {
             .then((userData) => {
               if (userData !== 'invalid') {
                 localStorage.setItem("userdata", JSON.stringify(userData));
+                toast.success('Login successful!');
                 setTimeout(() => {
                   navigate('/');
                   window.location.reload();
                 }, 1000);
               } else {
-                setErrorMessage('Invalid credentials. Please try again.');
+                toast.error('Invalid credentials. Please try again.');
               }
             })
             .catch(() => {
-              setErrorMessage('An error occurred. Please try again.');
+              toast.error('An error occurred. Please try again.');
             });
         }
       };
@@ -60,7 +61,7 @@ function SignIn() {
                     <div className="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
                         <div className="d-flex align-items-center justify-content-between mb-3">
                             <a href="/admin" className="">
-                                <h3 className="text-primary">SPORTXCONNECT ADMIN</h3>
+                                <h3 className="text-primary">SPORTXCONNECT</h3>
                             </a>
                             <h3>Sign In</h3>
                         </div>
@@ -88,7 +89,6 @@ function SignIn() {
                             <label htmlFor="floatingPassword">Password</label>
                             {passwordError && <div className="text-danger">{passwordError}</div>}
                         </div>
-                        {errorMessage && <p style={{ color: 'red', fontSize: '14px' }}>{errorMessage}</p>}
                         <button
                             type="button"
                             className="btn btn-primary py-3 w-100 mb-4"
@@ -96,9 +96,11 @@ function SignIn() {
                         >
                             Sign In
                         </button>
+                        <a href="http://localhost:3000/" className="text-center mb-4 text-muted">Go Home!</a>
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 }
